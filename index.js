@@ -1,6 +1,10 @@
 var readlineSync = require('readline-sync');
-var userName = readlineSync.question('Enter your name please!! ');
-var dateOfBirth = readlineSync.question('Enter your birth-date in DD/MM/YYYY format : ');
+var chalk = require('chalk');
+
+var userName = readlineSync.question(chalk.blue("Enter Your Name : "));
+console.log(chalk.green("welcome "+ userName));
+
+var dateOfBirth = readlineSync.question(chalk.blue('Enter your birth-date in DD/MM/YYYY format : '));
 
 let userDD = "";
 let userMM = "";
@@ -10,10 +14,10 @@ function leapYear(year)
 {
   if( (year % 400 == 0 && year % 100 != 0 ) || year % 4 == 0)
   {
-    console.log(userName + "!! your birth year is leap year");
+    console.log(chalk.green.underline.bold(userName + "!! your birth year is leap year"));
   }else
   {
-    console.log(userName + "!! your birth year is not leap year");
+    console.log(chalk.redBright.underline.bold(userName + "!! your birth year is not leap year"));
   }
 }
 
@@ -23,7 +27,7 @@ function validateDOB(date){
   userYYYY = date.substring(6);
 
   if(isNaN(userDD) ||  isNaN(userMM) || isNaN(userYYYY)){
-    console.log("please enter valid birth date");
+    console.log(console.log(chalk.red("please enter valid birth date")));
   }else{
     leapYear(userYYYY);
   }

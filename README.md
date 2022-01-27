@@ -18,6 +18,11 @@ Readline-Sync
 
 chalk
 
+# preview
+
+![leapYear](https://user-images.githubusercontent.com/50478681/151306534-3aeb4fdc-1aee-44d5-a803-5699ba0510a7.png)
+
+
 # Link
 
 [leapYear](https://replit.com/@Ahana001/LeapYear?embed=1&output=1)
